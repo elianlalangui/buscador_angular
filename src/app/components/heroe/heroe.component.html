@@ -1,0 +1,36 @@
+<h1>{{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img src="" alt="">
+        <br><br>
+        <a href="heroes" class="btn btn-outline-danger btn-black">Regresar
+
+        </a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{heroe.nombre}}</h3>
+        <hr>
+        <p>
+            {{heroe.bio}}
+        </p>
+        <div>
+            <img [src]="heroe.img" class="img-fluid rounded-start" alt="...">
+            <br><br><br><br>
+            <h3>Casa Creadora de Comics: {{heroe.casa}}</h3>
+            <p class="card-text">
+                <hr>
+                <div *ngIf="heroe.casa.includes('Marvel') else DC">
+                    <img src="assets\img\Marvel.jpg" alt="a">
+                </div>
+
+                <ng-template #DC>
+                    <div>
+                        <img src="assets\img\DC.jpg" alt="a">
+                    </div>
+                </ng-template>
+
+        </div>
+    </div>
+
+</div>
