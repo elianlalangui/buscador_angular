@@ -14,8 +14,7 @@ import { debounceTime } from 'rxjs';
 export class HeroesComponent {
 
   heroes:Heroe[]=[]
-  heroesFiltro:Heroe[]=[]
-
+  
   control = new FormControl();
 
   ngOnInit(): void{
